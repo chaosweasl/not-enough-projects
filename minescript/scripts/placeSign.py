@@ -1,7 +1,7 @@
 # this script uses the minescript mod to place a random sign where the player is standing and place random text 
 
 from minescript import (echo, execute, getblock, player)
-import sys, urllib.request, json, random
+import urllib.request, json, random
 
 MAX_LINE_LENGTH = 15
 MAX_LINES = 4
