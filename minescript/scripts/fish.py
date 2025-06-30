@@ -9,6 +9,8 @@ fishingPositions = [
     (-1, 56, -5)
 ]
 
+player_position = minescript.player_position
+
 def look_at_position(pos):
     x, y, z = pos
     minescript.player_look_at(x, y, z)
@@ -45,11 +47,20 @@ def wait_for_fish(bobber):
                 last_y = y
         time.sleep(0.1)
 
+def look_up_absolute():
+    # Get current player position
+    x, y, z = minescript.player_position()
+    # Look at the sky directly above (same X/Z, very high Y)
+    minescript.player_look_at(x, 500, z)
+    time.sleep(0.1)
+
 def main():
     while True:
         pos = random.choice(fishingPositions)
         look_at_position(pos)
         cast_rod()
+        time.sleep(0.2)
+        look_up_absolute()
         time.sleep(1)  # Give time for bobber to spawn
         bobber = get_fishing_bobber()
         if bobber:
