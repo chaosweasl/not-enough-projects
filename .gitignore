@@ -1,2 +1,5 @@
 # ignore python cache for minecraft scripts
 __pycache__/ 
+
+# ignore cpp environment i use for school (dont worry nothing interesting there)
+cpp_stuff
