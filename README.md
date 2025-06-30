@@ -1,2 +1,3 @@
 # not-enough-projects
-An amalgamation of random projects that I've built 
+
+An amalgamation of random projects that I've built
